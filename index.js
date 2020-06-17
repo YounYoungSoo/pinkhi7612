@@ -71,4 +71,10 @@ client.on('message', (message) => {
     message.reply('https://www.youtube.com/channel/UCTgdj1HMrJCYbEp0wSDS32A?view_as=subscriber');
   }
 });
+
+client.on('message', (message) => {
+  if(message.content === '$하이드로펌프') {
+    message.reply('https://ifh.cc/g/B6iDbB.png');
+  }
+});
 client.login(token);
