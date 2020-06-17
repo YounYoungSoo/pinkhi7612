@@ -13,13 +13,13 @@ client.on('ready', () => {
 });
 
 client.on('message', (message) => {
-  if(message.content === '$4반월') {
+  if(message.content === '$4반 월') {
     message.reply('중국어   과학(김태임)   사회   영어   역사   기술   체육');
   }
 });
 
 client.on('message', (message) => {
-    if(message.content === '$4반화') {
+    if(message.content === '$4반 화') {
       message.reply('가정   수학   국어(박숙)   과학(김태임)   체육   중국어   영어');
     }
 });
