@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.token;
 
+
 client.on('ready', () => {
   console.log('켰다.');
   client.user.setPresence({ game: { name: '$사용법 을 입력해보세요' }, status: 'online' })
@@ -132,4 +133,66 @@ function checkPermission(message) {
     return false;
   }
 }
+
+client.on('message', (message) => {
+  if(message.author.bot) return;
+
+  if(message.content == 'ping') {
+    return message.reply('pong');
+  }
+
+  if(message.content == '$4반월') {
+    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let commandList = [
+      {name: '1', desc: '중국어'},
+      {name: '2', desc: '과학(김태임)'},   
+      {name: '3', desc: '사회'},
+      {name: '4', desc: '영어'},
+      {name: '5', desc: '역사'},
+      {name: '6', desc: '기술'},
+      {name: '7', desc: '체육'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('제일중 시간표 BOT', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 시간표 봇 ❤️`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  if(message.content == '$4반화') {
+    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let commandList = [
+      {name: '1', desc: '가정'},
+      {name: '2', desc: '수학'},   
+      {name: '3', desc: '국어(박숙)'},
+      {name: '4', desc: '과학(김태임)'},
+      {name: '5', desc: '체육'},       
+      {name: '6', desc: '중국어'},
+      {name: '7', desc: '영어'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('제일중 시간표 BOT', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 시간표 봇 ❤️`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+});
 client.login(token);
