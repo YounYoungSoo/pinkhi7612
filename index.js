@@ -2,7 +2,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.token;
 
-
+client.on('ready', () => {
+  console.log('켰다.');
+  client.user.setPresence({ game: { name: '$사용법 을 입력해보세요' }, status: 'online' })
+});
 
 client.on('ready', () => {
   console.log('켰다.');
