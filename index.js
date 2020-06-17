@@ -45,7 +45,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
-      .setAuthor('심심하다', img, 'http://www.naver.com')
+      .setAuthor('심심하다 ', img, 'http://www.naver.com')
       .setThumbnail(img)
       .addBlankField()
       .addField('Inline field title', 'Some value here')
@@ -58,7 +58,7 @@ client.on('message', (message) => {
       .setFooter('제일중 시간표 봇', img)
 
     message.channel.send(embed)
-});
+}});
 
 
 client.on('ready', () => {
