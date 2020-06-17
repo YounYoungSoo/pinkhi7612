@@ -84,6 +84,12 @@ client.on('message', (message) => {
   }
 });
 
+client.on('message', (message) => {
+  if(message.content === '$클래스룸') {
+    message.reply('https://classroom.google.com/u/0/h');
+  }
+});
+
 client.on("guildMemberAdd", (member) => {
   const guild = member.guild;
   const newUser = member.user;
@@ -102,6 +108,7 @@ client.on("guildMemberRemove", (member) => {
   byeChannel.send(`<@${deleteUser.id}> ${byeChannelComment}\n`);
 });
 
+
 client.on('message', (message) => {
   if(message.author.bot) return;
 
@@ -109,55 +116,10 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
-  if(message.content == 'asdfasdvrvzxdfawasdfc') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
-    let embed = new Discord.RichEmbed()
-      .setTitle('타이틀')
-      .setURL('http://www.naver.com')
-      .setAuthor('나긋해', img, 'http://www.naver.com')
-      .setThumbnail(img)
-      .addBlankField()
-      .addField('Inline field title', 'Some value here')
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('나긋해가 만듬', img)
-
-    message.channel.send(embed)
-  } else if(message.content == '$4반월') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
-    let commandList = [
-      {name: '1', desc: '중국어'},
-      {name: '2', desc: '과학(김태임)'},   
-      {name: '3', desc: '사회'},
-      {name: '4', desc: '영어'},
-      {name: '5', desc: '역사'},
-      {name: '6', desc: '기술'},
-      {name: '7', desc: '체육'},
-    ];
-    let commandStr = '';
-    let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
-      .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
-      .setTimestamp()
-    
-    commandList.forEach(x => {
-      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-    });
-
-    embed.addField('Commands: ', commandStr);
-
-    message.channel.send(embed)
-  }
-
   if(message.content.startsWith('$전체공지')) {
     if(checkPermission(message)) return
     if(message.member != null) { // 채널에서 공지 쓸 때
-      let contents = message.content.slice('!전체공지'.length);
+      let contents = message.content.slice('$전체공지'.length);
       message.member.guild.members.array().forEach(x => {
         if(x.user.bot) return;
         x.user.send(`<@${message.author.id}> ${contents}`);
