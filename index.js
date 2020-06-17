@@ -26,7 +26,7 @@ client.on('message', (message) => {
 
 client.on('message', (message) => {
   if(message.content === '$4반수') {
-    message.reply('수학   영어   과학(손형래)   음악   국어(박숙)   사회');
+    message.reply('수학  ₩/n  영어  ₩/n  과학(손형래)  ₩/n  음악  ₩/n  국어(박숙)  ₩/n  사회');
   }
 });
 
