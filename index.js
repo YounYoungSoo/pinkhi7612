@@ -54,7 +54,7 @@ client.on('message', (message) => {
 
     message.channel.send(embed)
   } else if(message.content == '$4반월') {
-    let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
+    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
     let commandList = [
       {name: '1', desc: '중국어'},
       {name: '2', desc: '과학(김태임)'},
@@ -67,6 +67,33 @@ client.on('message', (message) => {
     let commandStr = '';
     let embed = new Discord.RichEmbed()
       .setAuthor('4반 월', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 시간표 봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$4반화') {
+    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let commandList = [
+      {name: '1', desc: '가정'},
+      {name: '2', desc: '수학'},
+      {name: '3', desc: '국어(박숙)'},
+      {name: '4', desc: '과학(김태임)'},
+      {name: '5', desc: '체육'},
+      {name: '6', desc: '중국어'},
+      {name: '7', desc: '영어'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('4반 화', helpImg)
       .setColor('#186de6')
       .setFooter(`제일중 시간표 봇`)
       .setTimestamp()
