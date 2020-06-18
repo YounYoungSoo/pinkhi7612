@@ -79,7 +79,7 @@ client.on('message', (message) => {
   }
 
   if(message.content == '$도움말') {
-    let img = 'https://ifh.cc/g/4TpxYu.png';
+    let img = 'https://ifh.cc/g/alEXhL.png';
     let embed = new Discord.RichEmbed()
       .setTitle('봇 명령어 도움말')
       .setURL('http://www.naver.com')
@@ -102,15 +102,34 @@ client.on('message', (message) => {
   } 
 
   if(message.content == '$업데이트') {
-    let img = 'https://ifh.cc/g/4TpxYu.png';
+    let img = 'https://ifh.cc/g/yQWJon.png';
     let embed = new Discord.RichEmbed()
       .setTitle('업데이트 현황')
       .setURL('http://www.naver.com')
       .setAuthor('제일중 시간표봇', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('업데이트 현황', '시간표 디자인 변경\n$사용법 -> $도움말 변경\n$클래스룸 기능 추가\n')
-      .addField('업데이트 예정', '1~6반 시간표 추가 예정\n$공지 기능 추가 예정\n')
+      .addField('업데이트 현황', '시간표 디자인 변경\n$사용법 -> $도움말 변경\n$클래스룸 기능 추가\n$공지 기능 추가\n')
+      .addField('업데이트 예정', '1~6반 시간표 추가 예정\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 시간표봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  if(message.content == '$공지') {
+    let img = 'https://ifh.cc/g/sVhaVo.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('공지')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 시간표봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('디자인 전면교체', '제일중 시간표 봇의 지저분한 디자인이 업데이트를 통해서 심플하게 바뀌었습니다. 앞으로도 제일중 시간표봇을 많이 이용해주시면 감사하겠습니다. ')
+      .addField('피드백', '추가해주었으면 하는 부분이 있으면 디코 채팅방에서 말해주십시오. 적극적으로 반영하겠습니다.')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 시간표봇', img)
