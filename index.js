@@ -56,10 +56,13 @@ client.on('message', (message) => {
   } else if(message.content == '$4반월') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
-      {name: '', desc: '현재 핑 상태'},
-      {name: 'embed', desc: 'embed 예제1'},
-      {name: 'embed2', desc: 'embed 예제2 (help)'},
-      {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
+      {name: '1', desc: '중국어'},
+      {name: '2', desc: '과학(김태임)'},
+      {name: '3', desc: '사회'},
+      {name: '4', desc: '영어'},
+      {name: '5', desc: '역사'},
+      {name: '6', desc: '기술'},
+      {name: '7', desc: '체육'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
