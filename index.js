@@ -14,7 +14,13 @@ client.on('ready', () => {
 
 client.on('message', (message) => {
   if(message.content === '$4반월') {
-    message.reply('중국어   과학(김태임)   사회   영어   역사   기술   체육');
+    message.reply('중국어');
+    message.reply('과학(김태임)');
+    message.reply('사회');
+    message.reply('영어');
+    message.reply('역사');
+    message.reply('기술');
+    message.reply('체육');
   }
 });
 
