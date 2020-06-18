@@ -92,6 +92,7 @@ client.on('message', (message) => {
       .addField('$아이잉', '--간단한 애교 움짤을 틀어줌--')
       .addField('$하이드로펌프', '--설사지린 재현이를 틀어줌--')
       .addField('$업데이트', '--업데이트 현황을 보여줌--')
+      .addField('$공지', '--제일중 시간표봇에 관한 공지를 보여줌--')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 시간표봇', img)
