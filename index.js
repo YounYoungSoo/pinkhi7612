@@ -38,9 +38,9 @@ client.on('message', (message) => {
   if(message.content == '$도움말') {
     let img = 'https://ifh.cc/g/4TpxYu.png';
     let embed = new Discord.RichEmbed()
-      .setTitle('타이틀')
+      .setTitle('봇 명령어 도움말')
       .setURL('http://www.naver.com')
-      .setAuthor('도움말', img, '')
+      .setAuthor('제일중 시간표봇', img, '')
       .setThumbnail(img)
       .addBlankField()
       .addField('$반요일', '예)4반월  --각 반의 시간표를 알려줌-- ')
@@ -56,16 +56,16 @@ client.on('message', (message) => {
   } else if(message.content == 'embed2') {
     let helpImg = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
     let commandList = [
-      {name: 'ping', desc: '현재 핑 상태'},
+      {name: '', desc: '현재 핑 상태'},
       {name: 'embed', desc: 'embed 예제1'},
       {name: 'embed2', desc: 'embed 예제2 (help)'},
       {name: '!전체공지', desc: 'dm으로 전체 공지 보내기'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('Help of 콜라곰 BOT', helpImg)
+      .setAuthor('4반 월', helpImg)
       .setColor('#186de6')
-      .setFooter(`콜라곰 BOT ❤️`)
+      .setFooter(`제일중 시간표 봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
