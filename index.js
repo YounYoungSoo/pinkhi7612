@@ -90,13 +90,37 @@ client.on('message', (message) => {
       .addField('$재현이', '--재현이의 움짤을 틀어줌--')
       .addField('$클래스룸', '--클래스룸 링크를 열어줌--')
       .addField('$아이잉', '--간단한 애교 움짤을 틀어줌--')
-      .addField('하이드로펌프', '--설사지린 재현이를 틀어줌--')
+      .addField('$하이드로펌프', '--설사지린 재현이를 틀어줌--')
+      .addField('$업데이트', '--업데이트 현황을 보여줌--')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 시간표봇', img)
 
     message.channel.send(embed)
-  } else if(message.content == '$4반월') {
+
+    
+  } 
+
+  if(message.content == '$업데이트') {
+    let img = 'https://ifh.cc/g/4TpxYu.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('업데이트 현황')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 시간표봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('업데이트 현황', '시간표 디자인 변경\n$사용법 -> $도움말 변경\n$클래스룸 기능 추가\n')
+      .addField('업데이트 예정', '1~6반 시간표 추가 예정\n$공지 기능 추가 예정\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 시간표봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  else if(message.content == '$4반월') {
     let helpImg = 'https://ifh.cc/g/4TpxYu.png';
     let commandList = [
       {name: '1교시', desc: '중국어'},
