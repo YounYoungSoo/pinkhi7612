@@ -36,7 +36,7 @@ client.on('message', (message) => {
   }
 
   if(message.content == '$도움말') {
-    let img = 'https://cdn.discordapp.com/icons/419671192857739264/6dccc22df4cb0051b50548627f36c09b.webp?size=256';
+    let img = 'https://ifh.cc/g/4TpxYu.png';
     let embed = new Discord.RichEmbed()
       .setTitle('타이틀')
       .setURL('http://www.naver.com')
@@ -44,9 +44,9 @@ client.on('message', (message) => {
       .setThumbnail(img)
       .addBlankField()
       .addField('$반요일', '예)4반월  --각 반의 시간표를 알려줌-- ')
-      .addField('$재현이', '--재현이의 움짤을 틀어줌--', true)
-      .addField('$클래스룸', '--클래스룸 링크를 열어줌--', true)
-      .addField('$아이잉', '--간단한 애교 움짤을 틀어줌--', true)
+      .addField('$재현이', '--재현이의 움짤을 틀어줌--')
+      .addField('$클래스룸', '--클래스룸 링크를 열어줌--')
+      .addField('$아이잉', '--간단한 애교 움짤을 틀어줌--')
       .addField('하이드로펌프', '--설사지린 재현이를 틀어줌--')
       .addBlankField()
       .setTimestamp()
