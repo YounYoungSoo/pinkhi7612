@@ -110,7 +110,7 @@ client.on('message', (message) => {
       .setAuthor('제일중 시간표봇', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('업데이트 현황', '토스봇 제작\n랏되 봇 메이커 홈페이지 개설\n시간표 디자인 변경\n$사용법 -> $도움말 변경\n$클래스룸 기능 추가\n$공지 기능 추가\n')
+      .addField('업데이트 현황', '토스봇 제작\n랏되 봇 메이커 홈페이지 개설\n랏되 봇 메이커 나무위키 개설\n시간표 디자인 변경\n')
       .addField('업데이트 예정', '1~6반 시간표 추가 예정\n')
       .addBlankField()
       .setTimestamp()
@@ -133,6 +133,7 @@ client.on('message', (message) => {
       .addField('피드백', '추가해주었으면 하는 부분이 있으면 디코 채팅방에서 말해주십시오. 적극적으로 반영하겠습니다.')
       .addField('랏되 봇 메이커 홈페이지 개설', '랏되 봇 메이커는 여러분의 성원에 힘입어 랏되 봇 메이커 홈페이지를 개설하였습니다. 앞으로 더 좋은 활동을 보여줄 것이며 많이많이 사용해 주시기 바랍니다.\nhttps://lattee.modoo.at')
       .addField('토스봇 제작', '배추봇의 짝퉁, 토스봇을 제작하였습니다. 많이 많이 사용해주세요^\nhttps://discordapp.com/channels/712212247082172497/721977683835355146/723148048368140369 ')
+      .addField('나무위키', '랏되 봇 메이커를 나무위키에서 찾아볼 수 있습니다.')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 시간표봇', img)
@@ -262,6 +263,139 @@ client.on('message', (message) => {
     let commandStr = '';
     let embed = new Discord.RichEmbed()
       .setAuthor('4반 금', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 시간표 봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$1반월') {
+    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let commandList = [
+      {name: '1교시', desc: '국어(박숙)'},
+      {name: '2교시', desc: '영어'},
+      {name: '3교시', desc: '수학'},
+      {name: '4교시', desc: '가정'},
+      {name: '5교시', desc: '과학(손형래)'},
+      {name: '6교시', desc: '사회'},
+      {name: '7교시', desc: '국어(이은영)'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('1반 월', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 시간표 봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$1반화') {
+    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let commandList = [
+      {name: '1교시', desc: '역사'},
+      {name: '2교시', desc: '과학(김태임)'},
+      {name: '3교시', desc: '영어'},
+      {name: '4교시', desc: '국어(박숙)'},
+      {name: '5교시', desc: '중국어'},
+      {name: '6교시', desc: '미술'},
+      {name: '7교시', desc: '체육'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('1반 화', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 시간표 봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$1반수') {
+    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let commandList = [
+      {name: '1교시', desc: '기술'},
+      {name: '2교시', desc: '음악'},
+      {name: '3교시', desc: '체육'},
+      {name: '4교시', desc: '수학'},
+      {name: '5교시', desc: '영어'},
+      {name: '6교시', desc: '과학(김태임)'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('1반 수', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 시간표 봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$1반목') {
+    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let commandList = [
+      {name: '1교시', desc: '체육'},
+      {name: '2교시', desc: '가정'},
+      {name: '3교시', desc: '중국어'},
+      {name: '4교시', desc: '영어'},
+      {name: '5교시', desc: '수학'},
+      {name: '6교시', desc: '스포츠'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('1반 목', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 시간표 봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$1반금') {
+    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let commandList = [
+      {name: '1교시', desc: '역사'},
+      {name: '2교시', desc: '과학(손형래)'},
+      {name: '3교시', desc: '사회'},
+      {name: '4교시', desc: '수학'},
+      {name: '5교시', desc: '국어(이은영)'},
+      {name: '6교시', desc: '창체'},
+      {name: '7교시', desc: '창체'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('1반 금', helpImg)
       .setColor('#186de6')
       .setFooter(`제일중 시간표 봇`)
       .setTimestamp()
