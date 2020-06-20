@@ -89,21 +89,22 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('봇 명령어 도움말')
       .setURL('http://www.naver.com')
-      .setAuthor('제일중 시간표봇', img, '')
+      .setAuthor('제일중 정보봇', img, '')
       .setThumbnail(img)
       .addBlankField()
       .addField('$반요일', '예)4반월  --각 반의 시간표를 알려줌-- ')
+      .addField('$급식요일', '--예)급식월 --학교 급식 식단표를 알려줌--')
       .addField('$재현이', '--재현이의 움짤을 틀어줌--')
       .addField('$클래스룸', '--클래스룸 링크를 열어줌--')
       .addField('$아이잉', '--간단한 애교 움짤을 틀어줌--')
       .addField('$하이드로펌프', '--설사지린 재현이를 틀어줌--')
       .addField('$재훈이', '--재현이 형 사진 틀어줌--')
       .addField('$업데이트', '--업데이트 현황을 보여줌--')
-      .addField('$공지', '--제일중 시간표봇에 관한 공지를 보여줌--')
+      .addField('$공지', '--제일중 정보봇에 관한 공지를 보여줌--')
 
       .addBlankField()
       .setTimestamp()
-      .setFooter('제일중 시간표봇', img)
+      .setFooter('제일중 정보봇', img)
 
     message.channel.send(embed)
 
@@ -115,14 +116,14 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('업데이트 현황')
       .setURL('http://www.naver.com')
-      .setAuthor('제일중 시간표봇', img, '')
+      .setAuthor('제일중 정보봇', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('업데이트 현황', '1반 시간표 추가\n토스봇 제작\n랏되 봇 메이커 홈페이지 개설\n')
+      .addField('업데이트 현황', '1반 시간표 추가\n토스봇 제작\n급식 기능 추가\n')
       .addField('업데이트 예정', '2~6반 시간표 추가 예정\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('제일중 시간표봇', img)
+      .setFooter('제일중 정보봇', img)
 
     message.channel.send(embed)
 
@@ -134,15 +135,105 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setTitle('공지')
       .setURL('http://www.naver.com')
-      .setAuthor('제일중 시간표봇', img, '')
+      .setAuthor('제일중 정보봇', img, '')
       .setThumbnail(img)
       .addBlankField()
       .addField('피드백', '추가해주었으면 하는 부분이 있으면 디코 채팅방에서 말해주십시오. 적극적으로 반영하겠습니다.')
       .addField('랏되 봇 메이커 홈페이지 개설', '랏되 봇 메이커는 여러분의 성원에 힘입어 랏되 봇 메이커 홈페이지를 개설하였습니다. 앞으로 더 좋은 활동을 보여줄 것이며 많이많이 사용해 주시기 바랍니다.\nhttps://lattee.modoo.at')
-      .addField('토스봇 제작', '배추봇의 짝퉁, 토스봇을 제작하였습니다. 많이 많이 사용해주세요^\nhttps://discordapp.com/channels/712212247082172497/721977683835355146/723148048368140369 ')
+      .addField('급식 기능 추가', '급식 식단표를 알려주는 기능이 추가되었습니다. $급식요일 을 입력하시면 급식 식단표를 볼 수 있습니다.\nhttps://discordapp.com/channels/712212247082172497/721977683835355146/723148048368140369 ')
       .addBlankField()
       .setTimestamp()
-      .setFooter('제일중 시간표봇', img)
+      .setFooter('제일중 정보봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  if(message.content == '$급식월') {
+    let img = 'https://ifh.cc/g/cJkBHJ.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('월요일 식단표')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 정보봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('월요일 식단표', '갈색가바현미밥\n해물짬뽕우동\n가지나물\n오징어실채볶음\n수제탕수육/소스\n배추김치\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 정보봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  if(message.content == '$급식화') {
+    let img = 'https://ifh.cc/g/cJkBHJ.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('화요일 식단표')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 정보봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('화요일 식단표', '귀리밥\n돼지고기김치찌개\n고등어감자조림\n진미채볶음\n야채달걀말이\n부추김치\n푸딩\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 정보봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  if(message.content == '$급식수') {
+    let img = 'https://ifh.cc/g/cJkBHJ.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('수요일 식단표')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 정보봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('수요일 식단표', '낙지야채비빔밥\n들깨무채국\n모닝빵샌드위치\n쿨피스\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 정보봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  if(message.content == '$급식목') {
+    let img = 'https://ifh.cc/g/cJkBHJ.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('목요일 식단표')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 정보봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('목요일 식단표', '귀리밥\n아욱된장국\n깻잎무쌈\n오리불고기\n햄감자채볶음\n배추김치\n카야잼파이\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 정보봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  if(message.content == '$급식금') {
+    let img = 'https://ifh.cc/g/cJkBHJ.png';
+    let embed = new Discord.RichEmbed()
+      .setTitle('금요일 식단표')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 정보봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('금요일 식단표', '보리밥\n닭곰탕\n양파절임\n순대떢복이\n새우까스/소스\n깍두기\n블루베리샐러드\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 정보봇', img)
 
     message.channel.send(embed)
 
@@ -164,7 +255,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('4반 월', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -191,7 +282,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('4반 화', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -217,7 +308,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('4반 수', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -243,7 +334,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('4반 목', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -270,7 +361,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('4반 금', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -297,7 +388,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('1반 월', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -324,7 +415,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('1반 화', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -350,7 +441,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('1반 수', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -376,7 +467,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('1반 목', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
@@ -403,7 +494,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('1반 금', helpImg)
       .setColor('#186de6')
-      .setFooter(`제일중 시간표 봇`)
+      .setFooter(`제일중 정보봇`)
       .setTimestamp()
     
     commandList.forEach(x => {
