@@ -85,7 +85,7 @@ client.on('message', (message) => {
   }
 
   if(message.content == '$도움말') {
-    let img = 'https://ifh.cc/g/alEXhL.png';
+    let img = 'https://ifh.cc/g/WG5any.png';
     let embed = new Discord.RichEmbed()
       .setTitle('봇 명령어 도움말')
       .setURL('http://www.naver.com')
@@ -112,7 +112,7 @@ client.on('message', (message) => {
   } 
 
   if(message.content == '$업데이트') {
-    let img = 'https://ifh.cc/g/yQWJon.png';
+    let img = 'https://ifh.cc/g/vGnMpu.png';
     let embed = new Discord.RichEmbed()
       .setTitle('업데이트 현황')
       .setURL('http://www.naver.com')
@@ -131,7 +131,7 @@ client.on('message', (message) => {
   }
 
   if(message.content == '$공지') {
-    let img = 'https://ifh.cc/g/sVhaVo.png';
+    let img = 'https://ifh.cc/g/3cbifG.png';
     let embed = new Discord.RichEmbed()
       .setTitle('공지')
       .setURL('http://www.naver.com')
@@ -241,7 +241,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$4반월') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '중국어'},
       {name: '2교시', desc: '과학(김태임)'},
@@ -268,7 +268,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$4반화') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '가정'},
       {name: '2교시', desc: '수학'},
@@ -295,7 +295,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$4반수') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '과학(손형래)'},
       {name: '2교시', desc: '영어'},
@@ -321,7 +321,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$4반목') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '가정'},
       {name: '2교시', desc: '과학(손형래)'},
@@ -347,7 +347,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$4반금') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '수학'},
       {name: '2교시', desc: '국어(이은영)'},
@@ -374,7 +374,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$1반월') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '국어(박숙)'},
       {name: '2교시', desc: '영어'},
@@ -401,7 +401,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$1반화') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '역사'},
       {name: '2교시', desc: '과학(김태임)'},
@@ -428,7 +428,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$1반수') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '기술'},
       {name: '2교시', desc: '음악'},
@@ -454,7 +454,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$1반목') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '체육'},
       {name: '2교시', desc: '가정'},
@@ -480,7 +480,7 @@ client.on('message', (message) => {
   }
 
   else if(message.content == '$1반금') {
-    let helpImg = 'https://ifh.cc/g/4TpxYu.png';
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
       {name: '1교시', desc: '역사'},
       {name: '2교시', desc: '과학(손형래)'},
