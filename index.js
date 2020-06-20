@@ -4,7 +4,7 @@ const token = process.env.token;
 const welcomeChannelName = "안녕하세요";
 const byeChannelName = "안녕히가세요";
 const welcomeChannelComment = "어서오세요.";
-const byeChannelComment = "안녕히가세요.";
+const byeChannelComment = "안녕히가세요.";    
 
 client.on('ready', () => {
   console.log('켰다.');
@@ -72,10 +72,16 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
+  if(message.content === '$재훈이') {
+    message.reply('https://ifh.cc/g/qJIJrw.jpg');
+  }
+});
+
+client.on('message', (message) => {
   if(message.author.bot) return;
 
   if(message.content == 'ping') {
-    return message.reply('pong');
+    return message.reply('fuck');
   }
 
   if(message.content == '$도움말') {
@@ -91,8 +97,10 @@ client.on('message', (message) => {
       .addField('$클래스룸', '--클래스룸 링크를 열어줌--')
       .addField('$아이잉', '--간단한 애교 움짤을 틀어줌--')
       .addField('$하이드로펌프', '--설사지린 재현이를 틀어줌--')
+      .addField('$재훈이', '--재현이 형 사진 틀어줌--')
       .addField('$업데이트', '--업데이트 현황을 보여줌--')
       .addField('$공지', '--제일중 시간표봇에 관한 공지를 보여줌--')
+
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 시간표봇', img)
@@ -110,8 +118,8 @@ client.on('message', (message) => {
       .setAuthor('제일중 시간표봇', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('업데이트 현황', '토스봇 제작\n랏되 봇 메이커 홈페이지 개설\n랏되 봇 메이커 나무위키 개설\n시간표 디자인 변경\n')
-      .addField('업데이트 예정', '1~6반 시간표 추가 예정\n')
+      .addField('업데이트 현황', '1반 시간표 추가\n토스봇 제작\n랏되 봇 메이커 홈페이지 개설\n')
+      .addField('업데이트 예정', '2~6반 시간표 추가 예정\n')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 시간표봇', img)
@@ -129,11 +137,9 @@ client.on('message', (message) => {
       .setAuthor('제일중 시간표봇', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('디자인 전면교체', '제일중 시간표 봇의 지저분한 디자인이 업데이트를 통해서 심플하게 바뀌었습니다. 앞으로도 제일중 시간표봇을 많이 이용해주시면 감사하겠습니다. ')
       .addField('피드백', '추가해주었으면 하는 부분이 있으면 디코 채팅방에서 말해주십시오. 적극적으로 반영하겠습니다.')
       .addField('랏되 봇 메이커 홈페이지 개설', '랏되 봇 메이커는 여러분의 성원에 힘입어 랏되 봇 메이커 홈페이지를 개설하였습니다. 앞으로 더 좋은 활동을 보여줄 것이며 많이많이 사용해 주시기 바랍니다.\nhttps://lattee.modoo.at')
       .addField('토스봇 제작', '배추봇의 짝퉁, 토스봇을 제작하였습니다. 많이 많이 사용해주세요^\nhttps://discordapp.com/channels/712212247082172497/721977683835355146/723148048368140369 ')
-      .addField('나무위키', '랏되 봇 메이커를 나무위키에서 찾아볼 수 있습니다.')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 시간표봇', img)
