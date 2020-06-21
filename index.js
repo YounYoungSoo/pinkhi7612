@@ -130,6 +130,26 @@ client.on('message', (message) => {
     
   }
 
+  if(message.content == '$부분일식') {
+    let img = '';
+    let embed = new Discord.RichEmbed()
+      .setTitle('부분일식 관측 현황')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 정보봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('부분일식 예정 시간 ', '6/21 3:58 ~ 6:21\n')
+      .addField('부분일식 예정일', '6/21(일) , 그후 10년뒤\n')
+      .addField('부분일식!!', '부분일식은 6/21 약 4시~6시 사이 일어납니다. 이때를 놓치면 10년 뒤에 봐야되니 셀로판지를 10장을 겹쳐 보시는걸 추천드립니다. \n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 정보봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
   if(message.content == '$공지') {
     let img = 'https://ifh.cc/g/3cbifG.png';
     let embed = new Discord.RichEmbed()
