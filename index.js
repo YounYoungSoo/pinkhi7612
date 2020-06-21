@@ -72,6 +72,12 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
+  if(message.content === '$부분일식') {
+    message.reply('대충 못찍었다는 댓글');
+  }
+});
+
+client.on('message', (message) => {
   if(message.content === '$재훈이') {
     message.reply('https://ifh.cc/g/qJIJrw.jpg');
   }
@@ -121,26 +127,6 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('업데이트 현황', '1반 시간표 추가\n토스봇 제작\n급식 기능 추가\n')
       .addField('업데이트 예정', '2~6반 시간표 추가 예정\n')
-      .addBlankField()
-      .setTimestamp()
-      .setFooter('제일중 정보봇', img)
-
-    message.channel.send(embed)
-
-    
-  }
-
-  if(message.content == '$부분일식') {
-    let img = '';
-    let embed = new Discord.RichEmbed()
-      .setTitle('부분일식 관측 현황')
-      .setURL('http://www.naver.com')
-      .setAuthor('제일중 정보봇', img, '')
-      .setThumbnail(img)
-      .addBlankField()
-      .addField('부분일식 예정 시간 ', '6/21 3:58 ~ 6:21\n')
-      .addField('부분일식 예정일', '6/21(일) , 그후 10년뒤\n')
-      .addField('부분일식!!', '부분일식은 6/21 약 4시~6시 사이 일어납니다. 이때를 놓치면 10년 뒤에 봐야되니 셀로판지를 10장을 겹쳐 보시는걸 추천드립니다. \n')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 정보봇', img)
