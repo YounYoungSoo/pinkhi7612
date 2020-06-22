@@ -897,7 +897,7 @@ client.on('message', (message) => {
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
-      .setAuthor('4반 금', helpImg)
+      .setAuthor('6반 금', helpImg)
       .setColor('#186de6')
       .setFooter(`제일중 정보봇`)
       .setTimestamp()
