@@ -379,6 +379,538 @@ client.on('message', (message) => {
     message.channel.send(embed)
   }
 
+  else if(message.content == '$2반월') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '과학(김태임)'},
+      {name: '2교시', desc: '영어'},
+      {name: '3교시', desc: '기술'},
+      {name: '4교시', desc: '체육'},
+      {name: '5교시', desc: '수학'},
+      {name: '6교시', desc: '국어(이은영)'},
+      {name: '7교시', desc: '사회'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('2반 월', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$2반화') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '중국어'},
+      {name: '2교시', desc: '과학(손형래)'},
+      {name: '3교시', desc: '영어'},
+      {name: '4교시', desc: '수학'},
+      {name: '5교시', desc: '국어(박숙)'},
+      {name: '6교시', desc: '체육'},
+      {name: '7교시', desc: '가정'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('2반 화', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$2반수') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '음악'},
+      {name: '2교시', desc: '수학'},
+      {name: '3교시', desc: '국어(이은영)'},
+      {name: '4교시', desc: '역사'},
+      {name: '5교시', desc: '영어'},
+      {name: '6교시', desc: '중국어'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('2반 수', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$2반목') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '과학(손형래)'},
+      {name: '2교시', desc: '체육'},
+      {name: '3교시', desc: '미술'},
+      {name: '4교시', desc: '영어'},
+      {name: '5교시', desc: '사회'},
+      {name: '6교시', desc: '스포츠'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('2반 목', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$2반금') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '국어(박숙)'},
+      {name: '2교시', desc: '가정(선예슬)'},
+      {name: '3교시', desc: '수학'},
+      {name: '4교시', desc: '과학(김태임)'},
+      {name: '5교시', desc: '역사'},
+      {name: '6교시', desc: '창체'},
+      {name: '7교시', desc: '창체'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('2반 금', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$3반월') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '과학(손형래)'},
+      {name: '2교시', desc: '수학'},
+      {name: '3교시', desc: '국어(이은영)'},
+      {name: '4교시', desc: '영어'},
+      {name: '5교시', desc: '체육'},
+      {name: '6교시', desc: '음악'},
+      {name: '7교시', desc: '중국어'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('3반 월', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$3반화') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '수학'},
+      {name: '2교시', desc: '미술'},
+      {name: '3교시', desc: '체육'},
+      {name: '4교시', desc: '역사'},
+      {name: '5교시', desc: '사회'},
+      {name: '6교시', desc: '과학(김태임)'},
+      {name: '7교시', desc: '영어'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('3반 화', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$3반수') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '사회'},
+      {name: '2교시', desc: '중국어'},
+      {name: '3교시', desc: '가정'},
+      {name: '4교시', desc: '과학(손형래)'},
+      {name: '5교시', desc: '체육'},
+      {name: '6교시', desc: '수학'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('3반 수', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$3반목') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '수학'},
+      {name: '2교시', desc: '기술'},
+      {name: '3교시', desc: '국어(박숙)'},
+      {name: '4교시', desc: '과학(김태임)'},
+      {name: '5교시', desc: '영어'},
+      {name: '6교시', desc: '스포츠'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('3반 목', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$3반금') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '국어(이은영)'},
+      {name: '2교시', desc: '국어(박숙)'},
+      {name: '3교시', desc: '영어'},
+      {name: '4교시', desc: '역사'},
+      {name: '5교시', desc: '가정'},
+      {name: '6교시', desc: '창체'},
+      {name: '7교시', desc: '창체'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('3반 금', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$5반월') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '음악'},
+      {name: '2교시', desc: '체육'},
+      {name: '3교시', desc: '과학(손형래)'},
+      {name: '4교시', desc: '국어(이은영)'},
+      {name: '5교시', desc: '영어'},
+      {name: '6교시', desc: '가정'},
+      {name: '7교시', desc: '수학'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('5반 월', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$5반화') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '영어'},
+      {name: '2교시', desc: '가정'},
+      {name: '3교시', desc: '사회'},
+      {name: '4교시', desc: '수학'},
+      {name: '5교시', desc: '미술'},
+      {name: '6교시', desc: '과학(손형래)'},
+      {name: '7교시', desc: '기술'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('5반 화', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$5반수') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '국어(박숙)'},
+      {name: '2교시', desc: '역사'},
+      {name: '3교시', desc: '과학(김태임)'},
+      {name: '4교시', desc: '체육'},
+      {name: '5교시', desc: '사회'},
+      {name: '6교시', desc: '수학'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('5반 수', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$5반목') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '역사'},
+      {name: '2교시', desc: '국어(박숙)'},
+      {name: '3교시', desc: '과학(김태임)'},
+      {name: '4교시', desc: '수학'},
+      {name: '5교시', desc: '중국어'},
+      {name: '6교시', desc: '영어'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('5반 목', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$5반금') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '중국어'},
+      {name: '2교시', desc: '영어'},
+      {name: '3교시', desc: '국어(이은영)'},
+      {name: '4교시', desc: '체육'},
+      {name: '5교시', desc: '스포츠'},
+      {name: '6교시', desc: '창체'},
+      {name: '7교시', desc: '창체'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('5반 금', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$6반월') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '국어(이은영)'},
+      {name: '2교시', desc: '국어(박숙)'},
+      {name: '3교시', desc: '음악'},
+      {name: '4교시', desc: '과학(김태임)'},
+      {name: '5교시', desc: '영어'},
+      {name: '6교시', desc: '수학'},
+      {name: '7교시', desc: '역사'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('6반 월', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$6반화') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '영어'},
+      {name: '2교시', desc: '역사'},
+      {name: '3교시', desc: '중국어'},
+      {name: '4교시', desc: '과학(손형래)'},
+      {name: '5교시', desc: '수학'},
+      {name: '6교시', desc: '가정'},
+      {name: '7교시', desc: '사회'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('6반 화', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$6반수') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '가정'},
+      {name: '2교시', desc: '체육'},
+      {name: '3교시', desc: '국어(박숙)'},
+      {name: '4교시', desc: '국어(이은영)'},
+      {name: '5교시', desc: '과학(김태임)'},
+      {name: '6교시', desc: '기술'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('6반 수', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$6반목') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '미술'},
+      {name: '2교시', desc: '수학'},
+      {name: '3교시', desc: '사회'},
+      {name: '4교시', desc: '체육'},
+      {name: '5교시', desc: '과학(손형래)'},
+      {name: '6교시', desc: '영어'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('6반 목', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
+  else if(message.content == '$6반금') {
+    let helpImg = 'https://ifh.cc/g/IIptUw.png';
+    let commandList = [
+      {name: '1교시', desc: '체육'},
+      {name: '2교시', desc: '영어'},
+      {name: '3교시', desc: '수학'},
+      {name: '4교시', desc: '중국어'},
+      {name: '5교시', desc: '스포츠'},
+      {name: '6교시', desc: '창체'},
+      {name: '7교시', desc: '창체'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('4반 금', helpImg)
+      .setColor('#186de6')
+      .setFooter(`제일중 정보봇`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+  }
+
   else if(message.content == '$1반월') {
     let helpImg = 'https://ifh.cc/g/IIptUw.png';
     let commandList = [
