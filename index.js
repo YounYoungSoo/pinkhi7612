@@ -41,6 +41,8 @@ client.on('message', (message) => {
   }
 });
 
+
+
 client.on('message', (message) => {
   if(message.content === '$심심하다') {
     message.reply('https://www.youtube.com/channel/UCTgdj1HMrJCYbEp0wSDS32A?view_as=subscriber');
@@ -84,6 +86,12 @@ client.on('message', (message) => {
 });
 
 client.on('message', (message) => {
+  if(message.content === '$diehd사이트') {
+    message.reply('https://www.youtube.com/watch?v=4UUYdpEzNs8');
+  }
+});
+
+client.on('message', (message) => {
   if(message.author.bot) return;
 
   if(message.content == 'ping') {
@@ -107,6 +115,7 @@ client.on('message', (message) => {
       .addField('$재훈이', '--재현이 형 사진 틀어줌--')
       .addField('$업데이트', '--업데이트 현황을 보여줌--')
       .addField('$공지', '--제일중 정보봇에 관한 공지를 보여줌--')
+      .addField('$diehd사이트', '--ㅗㅜㅑ한걸 보여줌--')
 
       .addBlankField()
       .setTimestamp()
@@ -125,8 +134,8 @@ client.on('message', (message) => {
       .setAuthor('제일중 정보봇', img, '')
       .setThumbnail(img)
       .addBlankField()
-      .addField('업데이트 현황', '1반 시간표 추가\n토스봇 제작\n급식 기능 추가\n')
-      .addField('업데이트 예정', '2~6반 시간표 추가 예정\n')
+      .addField('업데이트 현황', '1반 시간표 추가\n1~6반 시간표 추가\n급식 기능 추가\n')
+      .addField('업데이트 예정', '추가 업데이트 예정 없음\n')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 정보봇', img)
@@ -146,7 +155,7 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('피드백', '추가해주었으면 하는 부분이 있으면 디코 채팅방에서 말해주십시오. 적극적으로 반영하겠습니다.')
       .addField('랏되 봇 메이커 홈페이지 개설', '랏되 봇 메이커는 여러분의 성원에 힘입어 랏되 봇 메이커 홈페이지를 개설하였습니다. 앞으로 더 좋은 활동을 보여줄 것이며 많이많이 사용해 주시기 바랍니다.\nhttps://lattee.modoo.at')
-      .addField('급식 기능 추가', '급식 식단표를 알려주는 기능이 추가되었습니다. $급식요일 을 입력하시면 급식 식단표를 볼 수 있습니다.\nhttps://discordapp.com/channels/712212247082172497/721977683835355146/723148048368140369 ')
+      .addField('1~6반 시간표 추가', '$반요일 예)1반월 각 반의 시간표를 확인해 볼 수 있습니다')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 정보봇', img)
