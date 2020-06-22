@@ -116,6 +116,7 @@ client.on('message', (message) => {
       .addField('$업데이트', '--업데이트 현황을 보여줌--')
       .addField('$공지', '--제일중 정보봇에 관한 공지를 보여줌--')
       .addField('$diehd사이트', '--ㅗㅜㅑ한걸 보여줌--')
+      .addField('$학교장인사말', '--교장선생님의 인사말을 보여줌--')
 
       .addBlankField()
       .setTimestamp()
@@ -136,6 +137,24 @@ client.on('message', (message) => {
       .addBlankField()
       .addField('업데이트 현황', '1반 시간표 추가\n1~6반 시간표 추가\n급식 기능 추가\n')
       .addField('업데이트 예정', '추가 업데이트 예정 없음\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 정보봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  if(message.content == '$학교장인사말') {
+    let img = 'https://ifh.cc/g/aMrOFm.jpg';
+    let embed = new Discord.RichEmbed()
+      .setTitle('학교장 인사말')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 정보봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('화순제일중학교장 이종택', '우리 화순제일중학교는\n학생들의 저마다의 꿈을 소중하게 생각하고 그 꿈을 키울 수 있도록\n다양한 진로탐색을 위한 진로교육,\n사고의 폭과 깊이를 더해주는 독서교육,\n항상 남을 향한 배려와 봉사, 나눔을 실천할 수 있는 인성교육 등\n다양하고 특색있는 교육활동을 펼치고 있습니다.\n\n\n이러한 교육활동이 활발하게 펼쳐질 수 있도록 \n본교 홈페이지가 교사, 학생, 학부모, 지역 사회 여러분들의 \n만남, 나눔의 장이 되기를 기원합니다.\n')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 정보봇', img)
