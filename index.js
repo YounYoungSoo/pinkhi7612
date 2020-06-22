@@ -117,6 +117,7 @@ client.on('message', (message) => {
       .addField('$공지', '--제일중 정보봇에 관한 공지를 보여줌--')
       .addField('$diehd사이트', '--ㅗㅜㅑ한걸 보여줌--')
       .addField('$학교장인사말', '--교장선생님의 인사말을 보여줌--')
+      .addField('$학교상징', '--학교의 상징들을 보여줌--')
 
       .addBlankField()
       .setTimestamp()
@@ -155,6 +156,27 @@ client.on('message', (message) => {
       .setThumbnail(img)
       .addBlankField()
       .addField('화순제일중학교장 이종택', '우리 화순제일중학교는\n학생들의 저마다의 꿈을 소중하게 생각하고 그 꿈을 키울 수 있도록\n다양한 진로탐색을 위한 진로교육,\n사고의 폭과 깊이를 더해주는 독서교육,\n항상 남을 향한 배려와 봉사, 나눔을 실천할 수 있는 인성교육 등\n다양하고 특색있는 교육활동을 펼치고 있습니다.\n\n\n이러한 교육활동이 활발하게 펼쳐질 수 있도록 \n본교 홈페이지가 교사, 학생, 학부모, 지역 사회 여러분들의 \n만남, 나눔의 장이 되기를 기원합니다.\n')
+      .addBlankField()
+      .setTimestamp()
+      .setFooter('제일중 정보봇', img)
+
+    message.channel.send(embed)
+
+    
+  }
+
+  if(message.content == '$학교상징') {
+    let img = 'https://ifh.cc/g/aMrOFm.jpg';
+    let embed = new Discord.RichEmbed()
+      .setTitle('학교상징')
+      .setURL('http://www.naver.com')
+      .setAuthor('제일중 정보봇', img, '')
+      .setThumbnail(img)
+      .addBlankField()
+      .addField('교훈', '근면, 성실, 창의\nhttps://ifh.cc/g/zhJT2m.jpg')
+      .addField('교화', '들국화(순수, 희망)\nhttps://ifh.cc/g/5xdZXT.jpg')
+      .addField('교색', '노랑(평화, 안정)\nhttps://ifh.cc/g/3cFQ5V.jpg')
+      .addField('교기', '이미지\nhttps://ifh.cc/g/6l5vPZ.jpg')
       .addBlankField()
       .setTimestamp()
       .setFooter('제일중 정보봇', img)
